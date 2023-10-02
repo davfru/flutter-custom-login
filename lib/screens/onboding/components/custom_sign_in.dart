@@ -27,23 +27,25 @@ Future<Object?> customSigninDialog(BuildContext context,
                   borderRadius: const BorderRadius.all(Radius.circular(40))),
               child: Scaffold(
                 backgroundColor: Colors.transparent,
+                resizeToAvoidBottomInset:
+                    false, // avoid overflow error when keyboard shows up
                 body: Stack(
                   clipBehavior: Clip.none,
                   children: [
                     Column(children: [
-                      Text(
+                      const Text(
                         "Sign In",
                         style: TextStyle(fontSize: 34, fontFamily: "Poppins"),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 16),
                         child: Text(
-                          "Access 5to 240+ hours of content. Learn design and code, by builder real apps with Flutter and Swift.",
+                          "Access to 240+ hours of content. Learn design and code, by builder real apps with Flutter and Swift.",
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      SignInForm(),
-                      Row(
+                      const SignInForm(),
+                      const Row(
                         children: [
                           Expanded(
                             child: Divider(),
@@ -60,7 +62,7 @@ Future<Object?> customSigninDialog(BuildContext context,
                           ),
                         ],
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(vertical: 20.0),
                         child: Text("Sign up with Email, Apple or Google",
                             style: TextStyle(color: Colors.black54)),
@@ -95,7 +97,7 @@ Future<Object?> customSigninDialog(BuildContext context,
                         ],
                       )
                     ]),
-                    Positioned(
+                    const Positioned(
                       left: 0,
                       right: 0,
                       bottom: -48,
